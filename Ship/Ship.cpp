@@ -25,9 +25,9 @@ int main() {
         if (op == '1') {
             limpiar();
             std::cout << " ZONA DE CONFLICTO\n\n";
-            void imprimirPlanetaTriangular();
-            void imprimirPlanetaCuadrado();
-            void imprimirPlanetaCircular();
+            imprimirPlanetaTriangular();
+            imprimirPlanetaCuadrado();
+            imprimirPlanetaCircular();
             std::cout << " [ENTER] Continuar\n";
             std::cin.get();
 
@@ -42,7 +42,7 @@ int main() {
                 if (r == 0) {
                     gano = false;
                     limpiar();
-                    void imprimirArtePerdiste();
+                    imprimirArtePerdiste();
                     std::cout << "\n [ENTER] Volver al menu\n";
                     std::cin.get();
                     break;
@@ -50,14 +50,14 @@ int main() {
             }
             if (gano) {
                 limpiar();
-                void imprimirArteGanaste();
+                imprimirArteGanaste();
                 std::cout << "\n [ENTER] Volver al menu\n";
                 std::cin.get();
             }
         }
         else if (op == '2') {
             limpiar();
-            void imprimirArteInstrucciones();
+            imprimirArteInstrucciones();
             std::cin.get();
         }
         else if (op == '3') {

@@ -4,8 +4,6 @@
 #include <vector>
 #include <conio.h>
 
-
-
 void limpiar() {
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD inicio = { 0, 0 };
@@ -17,7 +15,10 @@ void limpiar() {
     SetConsoleCursorPosition(h, inicio);
 }
 
-void configurarNivel(int nivel) {
+char configurarNivel(int nivel) {
+    rolAliado = 1;
+    rolEnemigo = 2;
+    
     if (nivel == 1) {
         figuraAliado = 'O';
         figuraEnemigo = '#';
@@ -30,12 +31,18 @@ void configurarNivel(int nivel) {
         figuraAliado = ' ';
         figuraEnemigo = '#';
     }
-    rolAliado = 1;
-    rolEnemigo = 2;
+    return figuraEnemigo;
+
 }
 
-int jugarNivel(int nivel, int ANCHO, int ALTO) {
-    configurarNivel(nivel);
+int jugarNivel(int nivel, 
+    int ANCHO, 
+    int ALTO,
+    int rolAliado,
+    int rolEnemigo,
+    char figuraAliado,
+    char figuraEnemigo) {
+    
 
     Entidad jugador;
     jugador.x = ANCHO / 2;
@@ -82,7 +89,7 @@ int jugarNivel(int nivel, int ANCHO, int ALTO) {
             e.x = 1 + rand() % (ANCHO - 2);
             e.y = 1;
             e.hp = 1;
-            e.figura = figuraEnemigo;
+            e.figura = figuraEnemigo; //figuraEnemigo que valor tiene?
             e.rol = rolEnemigo;
             e.activo = true;
             enemigos.push_back(e);

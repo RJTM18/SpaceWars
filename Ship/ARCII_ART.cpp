@@ -3,9 +3,7 @@
 #include "ARCII_ART.h"
 #include "Motor_del_juego.h"
 
-#include <iostream>
-
-inline void imprimirArtePresentacion() {
+void imprimirArtePresentacion() {
     std::cout << "  ====================================\n";
     std::cout << "          G U E R R A   D E\n";
     std::cout << "            F I G U R A S\n";
@@ -20,7 +18,7 @@ inline void imprimirArtePresentacion() {
     std::cout << "        [3] Salir\n";
 }
 
-inline void imprimirArteInstrucciones() {
+void imprimirArteInstrucciones() {
     std::cout << "  ====================================\n";
     std::cout << "            INSTRUCCIONES\n";
     std::cout << "  ====================================\n";
@@ -36,7 +34,7 @@ inline void imprimirArteInstrucciones() {
     std::cout << "        [ENTER] Volver al menu\n";
 }
 
-inline void imprimirArteGanaste() {
+void imprimirArteGanaste() {
     std::cout << "  ====================================\n";
     std::cout << "             G A N A S T E\n";
     std::cout << "  ====================================\n";
@@ -46,7 +44,7 @@ inline void imprimirArteGanaste() {
     std::cout << "   La nacion triangular ha prevalecido.\n";
 }
 
-inline void imprimirArtePerdiste() {
+void imprimirArtePerdiste() {
     std::cout << "  ====================================\n";
     std::cout << "            P E R D I S T E\n";
     std::cout << "  ====================================\n";
@@ -55,7 +53,7 @@ inline void imprimirArtePerdiste() {
     std::cout << "   Tu nave triangular fue destruida.\n";
 }
 
-inline void imprimirPlanetaTriangular() {
+void imprimirPlanetaTriangular() {
     std::cout << "     /\\\n";
     std::cout << "    /  \\\n";
     std::cout << "   / /\\ \\\n";
@@ -63,7 +61,7 @@ inline void imprimirPlanetaTriangular() {
     std::cout << " Planeta Triangular\n";
 }
 
-inline void imprimirPlanetaCuadrado() {
+void imprimirPlanetaCuadrado() {
     std::cout << " +--------+\n";
     std::cout << " | []  [] |\n";
     std::cout << " |  [##]  |\n";
@@ -72,7 +70,7 @@ inline void imprimirPlanetaCuadrado() {
     std::cout << " Planeta Cuadrado\n";
 }
 
-inline void imprimirPlanetaCircular() {
+void imprimirPlanetaCircular() {
     std::cout << "   .----.\n";
     std::cout << "  / o  o \\\n";
     std::cout << " |   ()   |\n";
