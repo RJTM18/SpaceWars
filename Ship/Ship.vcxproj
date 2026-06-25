@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="ARCII_ART.cpp" />
     <ClCompile Include="ARCII_ART.h" />
+    <ClCompile Include="Motor_del_juego.cpp" />
+    <ClCompile Include="Motor_del_Juego.h" />
     <ClCompile Include="Ship.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

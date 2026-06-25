@@ -24,5 +24,11 @@
     <ClCompile Include="ARCII_ART.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="Motor_del_Juego.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Motor_del_juego.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

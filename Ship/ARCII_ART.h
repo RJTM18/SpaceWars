@@ -7,3 +7,5 @@ const std::string ARTE_PERDISTE;
 const std::string PLANETA_TRIANGULAR;
 const std::string PLANETA_CUADRADO;
 const std::string PLANETA_CIRCULAR;
+
+void mostrarCutscene(int nivel);
