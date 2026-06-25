@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cstdlib>
 #include <ctime>
 #include <conio.h>
 #include <windows.h>
@@ -16,23 +18,23 @@ int main() {
     bool salir = false;
     while (!salir) {
         limpiar();
-        std::cout << ARTE_PRESENTACION;
+        imprimirArtePresentacion();
         std::cout << "\n Selecciona una opcion: ";
         char op = _getch();
 
         if (op == '1') {
             limpiar();
             std::cout << " ZONA DE CONFLICTO\n\n";
-            std::cout << PLANETA_TRIANGULAR << "\n";
-            std::cout << PLANETA_CUADRADO << "\n";
-            std::cout << PLANETA_CIRCULAR << "\n";
+            void imprimirPlanetaTriangular();
+            void imprimirPlanetaCuadrado();
+            void imprimirPlanetaCircular();
             std::cout << " [ENTER] Continuar\n";
             std::cin.get();
 
             bool gano = true;
             for (int nivel = 1; nivel <= 3; nivel++) {
                 mostrarCutscene(nivel);
-                int r = jugarNivel(nivel);
+                int r = jugarNivel(nivel, ANCHO, ALTO);
                 if (r == -1) {
                     gano = false;
                     break;
@@ -40,7 +42,7 @@ int main() {
                 if (r == 0) {
                     gano = false;
                     limpiar();
-                    std::cout << ARTE_PERDISTE;
+                    void imprimirArtePerdiste();
                     std::cout << "\n [ENTER] Volver al menu\n";
                     std::cin.get();
                     break;
@@ -48,14 +50,14 @@ int main() {
             }
             if (gano) {
                 limpiar();
-                std::cout << ARTE_GANASTE;
+                void imprimirArteGanaste();
                 std::cout << "\n [ENTER] Volver al menu\n";
                 std::cin.get();
             }
         }
         else if (op == '2') {
             limpiar();
-            std::cout << ARTE_INSTRUCCIONES;
+            void imprimirArteInstrucciones();
             std::cin.get();
         }
         else if (op == '3') {

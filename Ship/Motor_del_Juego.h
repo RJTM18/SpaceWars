@@ -13,4 +13,4 @@ struct Entidad {
 void limpiar();
 void configurarNivel(int nivel);
 void mostrarCutscene(int nivel);
-int jugarNivel(int nivel);
+int jugarNivel(int nivel, int ANCHO, int ALTO);

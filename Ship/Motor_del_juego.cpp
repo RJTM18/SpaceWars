@@ -41,7 +41,7 @@ int jugarNivel(int nivel, int ANCHO, int ALTO) {
     jugador.x = ANCHO / 2;
     jugador.y = ALTO - 2;
     jugador.hp = 10;
-    jugador.figura = "^";
+    jugador.figura = '^';
     jugador.rol = 0;
     jugador.activo = true;
 
@@ -99,7 +99,7 @@ int jugarNivel(int nivel, int ANCHO, int ALTO) {
             }
         }
 
-        for (size_t i = 0; i < enemigos.size(); i++) {
+        for (size_t i = 0; i < enemigos.size(); i++) { 
             enemigos[i].y++;
             if (enemigos[i].x == jugador.x && enemigos[i].y == jugador.y) {
                 jugador.hp -= 2;
