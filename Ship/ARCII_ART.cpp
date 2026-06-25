@@ -1,0 +1,71 @@
+#include <string>
+#include "ARCII_ART.h"
+
+ARTE_PRESENTACION =
+"  ====================================\n"
+"          G U E R R A   D E\n"
+"            F I G U R A S\n"
+"  ====================================\n"
+"              /\\\n"
+"             /__\\\n"
+"        Una guerra eterna entre\n"
+"        triangulos, cuadrados y\n"
+"             circulos.\n\n"
+"        [1] Iniciar Juego\n"
+"        [2] Instrucciones\n"
+"        [3] Salir\n";
+
+ARTE_INSTRUCCIONES =
+"  ====================================\n"
+"            INSTRUCCIONES\n"
+"  ====================================\n"
+"   Mover:     W A S D\n"
+"   Disparar:  ESPACIO\n"
+"   Salir:     Q\n\n"
+"   Eres la nave triangular   ^\n"
+"   No dispares a tus aliados.\n"
+"   Destruye a los enemigos del nivel.\n\n"
+"   Nivel 1: aliado circulo (O), enemigo cuadrado (#)\n"
+"   Nivel 2: aliado cuadrado (#), enemigo circulo (O)\n"
+"   Nivel 3: todos son enemigos\n\n"
+"        [ENTER] Volver al menu\n";
+
+const std::string ARTE_GANASTE =
+"  ====================================\n"
+"             G A N A S T E\n"
+"  ====================================\n"
+"               \\o/\n"
+"                |\n"
+"               / \\\n"
+"   La nacion triangular ha prevalecido.\n";
+
+const std::string ARTE_PERDISTE =
+"  ====================================\n"
+"            P E R D I S T E\n"
+"  ====================================\n"
+"               X X\n"
+"              BOOM!\n"
+"   Tu nave triangular fue destruida.\n";
+
+const std::string PLANETA_TRIANGULAR =
+"     /\\\n"
+"    /  \\\n"
+"   / /\\ \\\n"
+"  /_/__\\_\\\n"
+" Planeta Triangular\n";
+
+const std::string PLANETA_CUADRADO =
+" +--------+\n"
+" | []  [] |\n"
+" |  [##]  |\n"
+" | []  [] |\n"
+" +--------+\n"
+" Planeta Cuadrado\n";
+
+const std::string PLANETA_CIRCULAR =
+"   .----.\n"
+"  / o  o \\\n"
+" |   ()   |\n"
+"  \\ ---- /\n"
+"   '----'\n"
+" Planeta Circular\n";
