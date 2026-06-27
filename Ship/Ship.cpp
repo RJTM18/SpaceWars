@@ -62,14 +62,18 @@ int main() {
                 std::cin.get();
             }
         }
-        else if (op == '2') {
+        else if (op == '2') { //intrucciones
             limpiar();
             imprimirArteInstrucciones();
+            std::cin.get(); //espera un ENTER como imput
+        }
+        else if (op == '3') { //creditos
+            limpiar();
+            imprimirCreditos();
+            std::cout << "\n [ENTER] Volver al menu\n";
             std::cin.get();
         }
-        else if (op == '3') {
-            salir = true;
-        }
+        else if (op == '4') salir = true; //salir dell juego
     }
 
     limpiar();

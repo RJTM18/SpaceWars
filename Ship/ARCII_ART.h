@@ -13,3 +13,6 @@ void imprimirPlanetaCircular();
 
 // esta funcion depende del nivel
 void mostrarCutscene(int nivel);
+
+//imprimir creditos
+void imprimirCreditos();

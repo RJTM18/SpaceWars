@@ -15,7 +15,8 @@ void imprimirArtePresentacion() {
     std::cout << "             circulos.\n\n";
     std::cout << "        [1] Iniciar Juego\n";
     std::cout << "        [2] Instrucciones\n";
-    std::cout << "        [3] Salir\n";
+    std::cout << "        [3] Creditos\n";
+    std::cout << "        [4] Salir\n";
 }
 
 void imprimirArteInstrucciones() {
@@ -108,4 +109,13 @@ void mostrarCutscene(int nivel) {
     }
     std::cout << "\n  [ENTER] Comenzar batalla\n";
     std::cin.get();
+}
+
+void imprimirCreditos() {
+    std::cout << " ====================================\n";
+    std::cout << "              AUTORES                \n";
+    std::cout << " Rafael Justo Tito Martel (U20261A795)\n";
+    std::cout << " Armando Eliseo Aragon Peralta\n";
+    std::cout << " Alejandro Gonzales Burga\n";
+    std::cout << " ====================================\n";
 }
