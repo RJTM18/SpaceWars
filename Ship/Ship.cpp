@@ -15,6 +15,10 @@ int main() {
     SetConsoleOutputCP(437);
     srand((unsigned)time(0));
 
+    Roles_figuras faccion;
+    faccion.aliado = ' ';
+    faccion.enemigo = ' ';
+
     bool salir = false;
     while (!salir) {
         limpiar();
@@ -34,7 +38,10 @@ int main() {
             bool gano = true;
             for (int nivel = 1; nivel <= 3; nivel++) {
                 mostrarCutscene(nivel);
-                int r = jugarNivel(nivel, ANCHO, ALTO);
+
+                configurarNivel(nivel, faccion); //funcion que retorna un struct
+
+                int r = jugarNivel(nivel, ANCHO, ALTO, faccion);
                 if (r == -1) {
                     gano = false;
                     break;

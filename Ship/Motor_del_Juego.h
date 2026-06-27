@@ -1,7 +1,3 @@
-extern int rolAliado; //extern es usado para que otros files usen la misma variables
-extern int rolEnemigo;
-extern char figuraAliado;
-extern char figuraEnemigo;
 
 struct Entidad {
     int x, y;
@@ -11,10 +7,15 @@ struct Entidad {
     bool activo;
 };
 
+struct Roles_figuras {
+    char aliado;
+    char enemigo;
+};
+
 void limpiar();
-void configurarNivel(int nivel);
 void mostrarCutscene(int nivel);
-int jugarNivel(int nivel, int ANCHO, int ALTO);
+struct Roles_figuras configurarNivel(int nivel, Roles_figuras &faccion);
+int jugarNivel(int nivel, int ANCHO, int ALTO, Roles_figuras &faccion);
 
 
 //descanso 10 mins

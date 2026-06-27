@@ -15,34 +15,29 @@ void limpiar() {
     SetConsoleCursorPosition(h, inicio);
 }
 
-char configurarNivel(int nivel) {
-    rolAliado = 1;
-    rolEnemigo = 2;
-    
+struct Roles_figuras configurarNivel(int nivel, Roles_figuras &faccion) { //funcion que retorna un struct //creating copy of the struct
     if (nivel == 1) {
-        figuraAliado = 'O';
-        figuraEnemigo = '#';
+        faccion.aliado = 'O'; 
+        faccion.enemigo = '#';
     }
     else if (nivel == 2) {
-        figuraAliado = '#';
-        figuraEnemigo = 'O';
+        faccion.aliado = '#';
+        faccion.enemigo = 'O';
     }
     else {
-        figuraAliado = ' ';
-        figuraEnemigo = '#';
+        faccion.aliado = ' ';
+        faccion.enemigo = '#';
     }
-    return figuraEnemigo;
-
+    return faccion;
 }
 
 int jugarNivel(int nivel, 
     int ANCHO, 
     int ALTO,
-    int rolAliado,
-    int rolEnemigo,
-    char figuraAliado,
-    char figuraEnemigo) {
+    Roles_figuras &faccion) {
     
+    int rolAliado = 1;
+    int rolEnemigo = 2;
 
     Entidad jugador;
     jugador.x = ANCHO / 2;
@@ -89,7 +84,7 @@ int jugarNivel(int nivel,
             e.x = 1 + rand() % (ANCHO - 2);
             e.y = 1;
             e.hp = 1;
-            e.figura = figuraEnemigo; //figuraEnemigo que valor tiene?
+            e.figura = faccion.enemigo; //figuraEnemigo que valor tiene?
             e.rol = rolEnemigo;
             e.activo = true;
             enemigos.push_back(e);
@@ -99,7 +94,7 @@ int jugarNivel(int nivel,
                 a.x = 1 + rand() % (ANCHO - 2);
                 a.y = 1;
                 a.hp = 1;
-                a.figura = figuraAliado;
+                a.figura = faccion.aliado;
                 a.rol = rolAliado;
                 a.activo = true;
                 aliados.push_back(a);
@@ -171,8 +166,8 @@ int jugarNivel(int nivel,
         if (nivel == 3)
             std::cout << " OBJETIVO: destruye a todos. No hay aliados.\n";
         else
-            std::cout << " OBJETIVO: destruye los enemigos (" << figuraEnemigo
-            << "). NO dispares a los aliados (" << figuraAliado << ").\n";
+            std::cout << " OBJETIVO: destruye los enemigos (" << faccion.enemigo
+            << "). NO dispares a los aliados (" << faccion.aliado << ").\n";
         for (int y = 0; y < ALTO; y++) std::cout << pantalla[y] << "\n";
 
         Sleep(80);
